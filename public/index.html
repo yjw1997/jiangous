@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title><%= webpackConfig.name %></title>
+
+  <!-- <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEboIuY52vuRQHnYSiWRjMcp6f62UjaTI&callback=initMap&libraries=places,geometry,drawing&v=&region=US&language=en"
+    async defer></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522%2C151.1957362&radius=1500&type=restaurant&keyword=cruise&key=AIzaSyDEboIuY52vuRQHnYSiWRjMcp6f62UjaTI"
+    async defer></script> -->
+  <style>
+    html,
+    body,
+    #app {
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+
+    }
+
+    #loading {
+      background-color: #000000;
+      background-image: url('./loading.gif');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  </style>
+  <script>
+    window._CONFIG = {}
+
+    function initMap() {
+      console.log('谷歌服务加载完成')
+      console.log('%c [ window ]-40', 'font-size:13px; background:pink; color:#bf2c9f;', window)
+
+    }
+  </script>
+</head>
+
+<body>
+  <script defer src="<%= BASE_URL %>static/tinymce4.7.5/tinymce.min.js"></script>
+
+  <div id="app">
+    <div id="loading"></div>
+  </div>
+</body>
+
+</html>
